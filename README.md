@@ -1,2 +1,2 @@
-# ganymede
-Jupyter test
+# Ganymede
+Get it? It orbits Jupiter!
