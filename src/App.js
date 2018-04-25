@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
 import mapboxgl from 'mapbox-gl'
 
-import logo from './logo.svg';
 import './App.css';
 
 // TODO: Move this access token to an environment variable.
@@ -36,6 +35,24 @@ class App extends Component {
         lat: lat.toFixed(4),
         zoom: map.getZoom().toFixed(2)
       });
+    });
+
+    map.on('load', () => {
+      map.addLayer({
+        id: 'locations',
+        type: 'circle',
+        source: {
+          type: 'geojson',
+          data: 'https://api.gdeltproject.org/api/v2/geo/geo?query=theme:education&format=geojson&mode=PointHeatMap'
+        },
+        paint: {
+          'circle-radius': {
+            'base': 1.75,
+            'stops': [[12, 2], [22, 180]]
+          },
+          'circle-color': '#10627c'
+        }
+      })
     });
   }
 
