@@ -1,7 +1,14 @@
-.button {
+.sidebarToggle {
   position: absolute;
-  left: 400px;
+  left: 0;
   z-index: 100;
+}
+
+.simpleBtn {
+  padding: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .contentArea {

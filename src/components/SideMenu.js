@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import { Sidebar, Menu } from 'semantic-ui-react';
+import { Sidebar, Menu, Icon } from 'semantic-ui-react';
+
+import './SideMenu.css';
 
 class SideMenu extends Component {
   render() {
     return (
       <Sidebar as={Menu} animation='overlay' width='wide' visible={this.props.visible} vertical>
+        <button onClick={this.props.onToggle} className="simpleBtn sidebarClose">
+          <Icon name="close" size="big" />
+        </button>
         <Menu.Item>
           <Menu.Header>Points</Menu.Header>
           <Menu.Menu>

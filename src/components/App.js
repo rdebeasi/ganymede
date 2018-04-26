@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Sidebar, Button, Icon } from 'semantic-ui-react';
+import { Sidebar, Icon } from 'semantic-ui-react';
 
 import './App.css';
 import Map from './Map';
@@ -12,17 +12,15 @@ class App extends Component {
 
   render() {
     return (
-        <Sidebar.Pushable>
-          <SideMenu visible={this.state.sidebarVisible} />
-          <Button onClick={this.toggleSidebar}>
-            <Icon name="sidebar" size="big" />
-          </Button>
-            <Sidebar.Pusher className="contentArea">
-              <Map />
-            </Sidebar.Pusher>
-        </Sidebar.Pushable>
-
-
+      <Sidebar.Pushable>
+        <SideMenu visible={this.state.sidebarVisible} onToggle={this.toggleSidebar} />
+        <button onClick={this.toggleSidebar} className="sidebarToggle simpleBtn">
+          <Icon name="sidebar" size="big" />
+        </button>
+        <Sidebar.Pusher className="contentArea">
+          <Map />
+        </Sidebar.Pusher>
+      </Sidebar.Pushable>
     );
   }
 }
