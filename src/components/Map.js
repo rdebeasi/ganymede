@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import mapboxgl from 'mapbox-gl'
 
-import './App.css';
+import './Map.css';
 
 // TODO: Move this access token to an environment variable.
 mapboxgl.accessToken = 'pk.eyJ1IjoicmRlYmVhc2ktcmgiLCJhIjoiY2pnZm1raHVjMmx0OTMzbXFqcXE2ZzZmayJ9.kBwjWXYflZ0JJ3Cfsi5p1Q';
