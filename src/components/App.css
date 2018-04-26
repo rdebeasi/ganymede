@@ -1,0 +1,11 @@
+.button {
+  position: absolute;
+  left: 400px;
+  z-index: 100;
+}
+
+.contentArea {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
