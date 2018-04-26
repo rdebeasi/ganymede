@@ -8,13 +8,22 @@ class SideMenu extends Component {
     return (
       <Sidebar as={Menu} animation='overlay' width='wide' visible={this.props.visible} vertical>
         <button onClick={this.props.onToggle} className="simpleBtn sidebarClose">
-          <Icon name="close" size="big" />
+          <Icon name="angle double left" size="big" />
         </button>
         <Menu.Item>
-          <Menu.Header>Points</Menu.Header>
+          <Menu.Header>News Topics</Menu.Header>
           <Menu.Menu>
             <Menu.Item>One</Menu.Item>
             <Menu.Item>Two</Menu.Item>
+          </Menu.Menu>
+        </Menu.Item>
+        <Menu.Item>
+          <Menu.Header>Tone</Menu.Header>
+          <Menu.Menu>
+            <Menu.Item>All</Menu.Item>
+            <Menu.Item>Positive</Menu.Item>
+            <Menu.Item>Negative</Menu.Item>
+            <Menu.Item>Neutral</Menu.Item>
           </Menu.Menu>
         </Menu.Item>
         <Menu.Item>

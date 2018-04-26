@@ -6,7 +6,7 @@ import Map from './Map';
 import SideMenu from './SideMenu';
 
 class App extends Component {
-  state = { sidebarVisible: false };
+  state = { sidebarVisible: true };
 
   toggleSidebar = () => this.setState({ sidebarVisible: !this.state.sidebarVisible });
 
